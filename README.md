@@ -1,18 +1,18 @@
-# Search target tool
+# Search Target Tool
 
-### 2019-03-20 21:31:47
+#### 2019-03-20 21:31:47
 默认浏览器设置为ChromeHeadless，因FirefoxHeadless 跟驱动经常connection refused。
 全局的变量大写，在局部引用时加关键字global。
 关闭browser 对象之前先检查是否存在该变量且不为None。
 bms.sh 全部设置为sleep 10，十秒足够了。sleep 并不是ttt.py 执行所需的时间。
 
-2019-03-19 09:17:07
+### 2019-03-19 09:17:07
 程序一开始将配置文件名和结果文件名打印到屏幕及日志文件里。
 
-2019-03-11 21:08:16
+### 2019-03-11 21:08:16
 每启动一个task 的时候在Using 浏览器后面显示taskSeq/task 总数。
 
-2019-03-05 19:35:12
+#### 2019-03-05 19:35:12
 当配置文件出现不知名浏览器默认用FirefoxHeadless。
 更新了Chrome 和Firefox 用headless 模式的代码，之前已经被官方摒弃。
 修正了重复quit 浏览器导致出现的多余日志错误，加入了退出浏览器前的判断。
