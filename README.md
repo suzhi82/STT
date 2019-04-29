@@ -1,6 +1,6 @@
 # Search target tool
 
-2019-03-20 21:31:47
+### 2019-03-20 21:31:47
 默认浏览器设置为ChromeHeadless，因FirefoxHeadless 跟驱动经常connection refused。
 全局的变量大写，在局部引用时加关键字global。
 关闭browser 对象之前先检查是否存在该变量且不为None。
