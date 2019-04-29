@@ -1,0 +1,47 @@
+22:44 2017-10-24
+
+开发笔记
+
+本程序难点
+
+一、多线程
+对共享资源使用线程锁
+
+
+二、自动化访问的超时设置
+
+# Dynamically get browser by eval()
+# 使用动态语句获取浏览器的驱动，驱动和浏览器版本存在兼容性，即使是同一家开发的。
+browser = eval('webdriver.' + BROWSER + '()')
+
+# Implicit wait for the lifetime of the browser
+# 设置的是浏览器的生命周期，时间到浏览器自动销毁。
+# !!! 注意：同时设置implicit_wait 会增加WebDriverWait 的时间，可能会等待隐式+显式的总时间。
+browser.implicitly_wait(THREAD_TIMEOUT)
+
+# Timeout of the browser.get() method
+# 调用browser.get() 的超时，否则默认是等待加入页面所有元素，包括异步的AJAX。
+browser.set_page_load_timeout(SEARCH_TIMEOUT)
+
+# Explicit wait object
+# 对在页面中click 某个按键后，等待浏览器载入内容，与上面get() 不同，get() 针对的是地址栏跳转。
+wait = WebDriverWait(browser, SEARCH_TIMEOUT)
+
+# 用于主线程等待子线程，在规定时间外主线程不再等待，主线程结束子线程也会跟着消失。
+thread.join(THREAD_TIMEOUT+5)
+
+
+三、程序主要思路
+
+主线程从json 文件中读取所有的爬虫任务Task，
+并它们设置为线程类TaskThread 的静态成员变量TaskThread.taskQueue。
+
+主线程任务数量和配置文件中的最大线程数二者中的最小者实例化TaskThread 的实例，
+每个线程实例在读取TaskThread.taskQueue 时先上锁，如果队列为空则线程结束，否则领取任务，释放线程锁。
+
+主线程在TaskThread.taskQueue 还有任务时，时隔1 秒再扫描一次，最后使用join 等待每个线程都结束。
+
+TaskThread 主要是其__huntElement 函数根据Task 的配置搜索网页上的元素并提取相关内容。
+
+
+=============================================================================

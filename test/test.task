@@ -1,0 +1,25 @@
+{
+    "Name": "TSLA LINKEDIN CAREER",
+    "Url": "https://www.linkedin.com/jobs/search/?keywords=tesla&location=Worldwide",
+    "Locating": {
+        "ByType": "css selector",
+        "Location": "div.jobs-search-results__count-string"
+    },
+    "Login": {
+        "LoginUrl": "https://www.linkedin.com/",
+        "Username": {
+            "ByType": "id",
+            "Location": "login-email",
+            "Input": "ren.li.vic@gmail.com"
+        },
+        "Password": {
+            "ByType": "id",
+            "Location": "login-password",
+            "Input": "Spike777"
+        },
+        "LogonFlag": {
+            "ByType": "id",
+            "Location": "jobs-nav-item"
+        }
+    }
+}

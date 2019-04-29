@@ -1,0 +1,49 @@
+23:36 2018-06-30
+
+新版Selenium 不再支持PhantomJS，同时Firefox 56 之后开始支持Headless 模式，
+所以将ttt.py 主程序更新为支持Firefox 和Chrome 到无界面模式，方便结合GUI 调试自动化脚本。
+LinkedIn 某些页面不再支持PhantomJS，所以必须改成ChromeHeadless 或FirefoxHeadless，详见配置文件lnkd.conf。
+
+
+升级所需软件(具体案子步骤详见《Ubuntu-14.04.5 配置Selenium 环境》)
+
+注意：Chrome >= 66.0，Firefox >=61.0，Python >= 3.6.2
+
+Browsers:
+google-chrome-stable_current_amd64.deb
+wget -P ~/Downloads https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+Firefox 直接在Help 菜单中Update 即可。
+
+
+-------------------------------------
+PythonLib:
+selenium-3.13.0.tar.gz
+https://pypi.python.org/pypi/selenium#downloads
+tar xvf selenium-3.13.0.tar.gz
+cd selenium-3.13.0
+sudo python3.6 setup.py install
+
+
+-------------------------------------
+WebDrivers:
+https://sites.google.com/a/chromium.org/chromedriver/downloads
+chromedriver_linux64.zip
+
+https://github.com/mozilla/geckodriver/releases
+geckodriver-v0.21.0-linux64.tar.gz
+
+unzip chromedriver_linux64.zip
+tar -xvf geckodriver-v0.21.0-linux64.tar.gz
+sudo mv chromedriver geckodriver /usr/bin/
+
+
+-------------------------------------
+Test
+
+cd ~/STT/
+./ttt.py -c lnkd.conf
+
+
+=============================================================================
