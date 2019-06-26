@@ -16,6 +16,7 @@ python3 ttt.py [-c <configfile>] [-o <outputfile>] [-h]
 
 
 ## Configuration(JSON Format)
+### Sample config https://raw.githubusercontent.com/suzhi82/STT/master/stt.conf 
 <pre name="code" class="json">
 Comment
 Name
