@@ -10,13 +10,9 @@ geckodriver:	https://github.com/mozilla/geckodriver/releases
 
 
 ## Usage
-<pre name="code" class="shell">
 python3 ttt.py [-c <configfile>] [-o <outputfile>] [-h]
-<pre>
 ### Example
-<pre name="code" class="shell">
 /usr/bin/python3.6 /home/STT/stt.py -c /home/STT/A01-ICT.conf -o /home/STT/results/A01-ICT.csv
-<pre>
 
 
 ## Configuration(JSON Format)
