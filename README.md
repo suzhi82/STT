@@ -16,6 +16,7 @@ python3 ttt.py [-c <configfile>] [-o <outputfile>] [-h]
 
 
 ## Configuration(JSON Format)
+<pre name="code" class="json">
 Comment  
 Name  
 Initialization  
@@ -43,6 +44,7 @@ Tasks
     Locating  
         ByType  
         Location  
+</pre>
   
 
 ## Update Logs
