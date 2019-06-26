@@ -1,5 +1,51 @@
 # Search Target Tool
 
+## Requirements
+Python3 >= 3.6
+Selenium >= 3.13.0
+Chrome >= 66.0
+Firefox >= 61.0 
+chromedriver:	https://sites.google.com/a/chromium.org/chromedriver/downloads
+geckodriver:	https://github.com/mozilla/geckodriver/releases
+
+
+## Usage
+python3 ttt.py [-c <configfile>] [-o <outputfile>] [-h]
+### Example
+/usr/bin/python3.6 /home/STT/stt.py -c /home/STT/A01-ICT.conf -o /home/STT/results/A01-ICT.csv
+
+
+## Configuration(JSON Format)
+Comment
+Name
+Initialization
+    Comment
+        MaxThreads
+        SearchTimeout
+        Browser ChromeHeadless
+        CSVTitle
+Tasks
+    Name
+    Url
+    Login
+        LoginUrl
+            Username
+                ByType
+                Location
+                Input
+            Password
+                ByType
+                Location
+                Input
+            LogonFlag
+                ByType
+                Location
+    Locating
+        ByType
+        Location
+
+
+## Update Logs
 #### 2019-03-20 21:31:47
 默认浏览器设置为ChromeHeadless，因FirefoxHeadless 跟驱动经常connection refused。
 全局的变量大写，在局部引用时加关键字global。
