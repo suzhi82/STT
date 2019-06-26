@@ -10,7 +10,7 @@ geckodriver:	https://github.com/mozilla/geckodriver/releases
 
 
 ## Usage
-python3 ttt.py [-c <configfile>] [-o <outputfile>] [-h]
+python3 ttt.py [-c \<configfile\>] [-o \<outputfile\>] [-h]
 ### Example
 /usr/bin/python3.6 /home/STT/stt.py -c /home/STT/A01-ICT.conf -o /home/STT/results/A01-ICT.csv
 
