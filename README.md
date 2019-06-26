@@ -1,12 +1,12 @@
 # Search Target Tool
 
 ## Requirements
-Python3 >= 3.6
-Selenium >= 3.13.0
-Chrome >= 66.0
-Firefox >= 61.0 
-chromedriver:	https://sites.google.com/a/chromium.org/chromedriver/downloads
-geckodriver:	https://github.com/mozilla/geckodriver/releases
+Python3 >= 3.6  
+Selenium >= 3.13.0  
+Chrome >= 66.0  
+Firefox >= 61.0  
+chromedriver:	https://sites.google.com/a/chromium.org/chromedriver/downloads  
+geckodriver:	https://github.com/mozilla/geckodriver/releases  
 
 
 ## Usage
