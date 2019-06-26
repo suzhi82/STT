@@ -16,34 +16,34 @@ python3 ttt.py [-c <configfile>] [-o <outputfile>] [-h]
 
 
 ## Configuration(JSON Format)
-Comment
-Name
-Initialization
-    Comment
-        MaxThreads
-        SearchTimeout
-        Browser ChromeHeadless
-        CSVTitle
-Tasks
-    Name
-    Url
-    Login
-        LoginUrl
-            Username
-                ByType
-                Location
-                Input
-            Password
-                ByType
-                Location
-                Input
-            LogonFlag
-                ByType
-                Location
-    Locating
-        ByType
-        Location
-
+Comment  
+Name  
+Initialization  
+    Comment  
+        MaxThreads  
+        SearchTimeout  
+        Browser ChromeHeadless  
+        CSVTitle  
+Tasks  
+    Name  
+    Url  
+    Login  
+        LoginUrl  
+            Username  
+                ByType  
+                Location  
+                Input  
+            Password  
+                ByType  
+                Location  
+                Input  
+            LogonFlag  
+                ByType  
+                Location  
+    Locating  
+        ByType  
+        Location  
+  
 
 ## Update Logs
 #### 2019-03-20 21:31:47
